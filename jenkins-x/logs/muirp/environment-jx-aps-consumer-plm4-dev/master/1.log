@@ -1,0 +1,31 @@
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-4h5rq-1[0m stage [32mrelease[0m and container [32mstep-credential-initializer-75r4g[0m
+{"level":"warn","ts":1569411087.7610247,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1569411087.7616317,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-4h5rq-1[0m stage [32mrelease[0m and container [32mstep-working-dir-initializer-gmz55[0m
+{"level":"warn","ts":1569411088.3718305,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1569411088.3733883,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env /workspace/source/prowConfig /workspace/source/repositories /workspace/source/systems/acme /workspace/source/systems/cm /workspace/source/systems/external-dns /workspace/source/systems/**ing /workspace/source/systems/vault\""}
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-4h5rq-1[0m stage [32mrelease[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-4h5rq-1[0m stage [32mrelease[0m and container [32mstep-git-source-muirp-environment-jx-aps-consum-9jdxb[0m
+{"level":"warn","ts":1569411098.4617522,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1569411098.7262726,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/muirp/environment-**-aps-consumer-plm4-dev.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-4h5rq-1[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:8416a0f1edfbf75beb1e3c7b72196f131a74778a
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-4h5rq-1[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
+Git configured for user: jenkins-x and email jenkins-x@googlegroups.com
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-4h5rq-1[0m stage [32mrelease[0m and container [32mstep-override-requirements[0m
+DEBUG: Overriding Requirements...
+DEBUG: saving /workspace/source/**-requirements.yml
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-4h5rq-1[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
+DEBUG: Gathering Requirements...
+error: please specify 'project' in **-requirements when running  in  batch mode
+[31m
+Pipeline failed on stage 'release' : container 'step-verify-preinstall'. The execution of the pipeline has stopped.[0m
