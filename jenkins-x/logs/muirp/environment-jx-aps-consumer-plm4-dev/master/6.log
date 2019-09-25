@@ -1,0 +1,123 @@
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-hwp9h-6[0m stage [32mrelease[0m and container [32mstep-credential-initializer-vkh5f[0m
+{"level":"warn","ts":1569420589.8238895,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1569420589.8242502,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-hwp9h-6[0m stage [32mrelease[0m and container [32mstep-working-dir-initializer-g4krq[0m
+{"level":"warn","ts":1569420590.8172839,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1569420590.8192325,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env /workspace/source/prowConfig /workspace/source/repositories /workspace/source/systems/acme /workspace/source/systems/cm /workspace/source/systems/external-dns /workspace/source/systems/**ing /workspace/source/systems/vault\""}
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-hwp9h-6[0m stage [32mrelease[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-hwp9h-6[0m stage [32mrelease[0m and container [32mstep-git-source-muirp-environment-jx-aps-consum-m899w[0m
+{"level":"warn","ts":1569420600.9759405,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1569420601.2696252,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/muirp/environment-**-aps-consumer-plm4-dev.git @ v0.0.6 in path /workspace/source"}
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-hwp9h-6[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:3dba4b554ff7d9f337fcd36ed26cc725bd965375
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-hwp9h-6[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
+Git configured for user: jenkins-x and email jenkins-x@googlegroups.com
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-hwp9h-6[0m stage [32mrelease[0m and container [32mstep-override-requirements[0m
+DEBUG: Overriding Requirements...
+DEBUG: saving /workspace/source/**-requirements.yml
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-hwp9h-6[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
+DEBUG: Gathering Requirements...
+no need to reconnect to cluster
+DEBUG: Setting the dev namespace to: **
+verifying the kubernetes cluster before we try to boot Jenkins X in namespace: **
+we will try to lazily create any missing resources to get the current cluster ready to boot Jenkins X
+DEBUG: Verifying Dev Namespace...
+DEBUG: Verifying Ingress...
+setting the local kubernetes context to the deploy namespace **
+verifying the CLI packages
+Using namespace '**' from context named '' on server ''.
+DEBUG: Using helmBinary helm with feature flag: template-mode
+verifying the CLI package using version stream URL:  and git ref: 
+DEBUG: Current configuration dir: /builder/home/.**
+DEBUG: versionRepository: https://github.com/jenkins-x/jenkins-x-versions.git git ref: 
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+DEBUG: found version 2.0.780 of ** from the version stream
+NAME               VERSION
+**                 2.0.779
+Kubernetes cluster v1.13.7-gke.8
+kubectl            v1.15.3
+helm client        Client: v2.14.3+g0e7f3b6
+git                2.21.0
+
+WARNING: A different ** version 2.0.780 is available in the version stream. We highly recommend you upgrade to it.
+WARNING: To upgrade to this new version use: ** upgrade cli then re-run ** boot
+the CLI packages seem to be setup correctly kubectl, git, helm
+
+DEBUG: Verifying Install Config...
+DEBUG: Verifying Storage...
+WARNING: Your requirements have not enabled cloud storage for logs - we recommend enabling this for kubernetes provider gke
+WARNING: Your requirements have not enabled cloud storage for reports - we recommend enabling this for kubernetes provider gke
+WARNING: Your requirements have not enabled cloud storage for repository - we recommend enabling this for kubernetes provider gke
+WARNING: Your requirements have not enabled cloud storage for backup - we recommend enabling this for kubernetes provider gke
+the storage looks good
+DEBUG: Verifying Helm...
+DEBUG: Using helmBinary helm with feature flag: template-mode
+DEBUG: Using helm2
+DEBUG: Skipping tiller
+DEBUG: Initialising Helm 'init --client-only'
+helm installed and configured
+helm client is setup
+DEBUG: Using helmBinary helm with feature flag: template-mode
+DEBUG: getting vault name for namespace **
+DEBUG: system vault name from config **-aps-consumer-plm4
+DEBUG: finding service url for **-aps-consumer-plm4 in namespace **
+DEBUG: couldn't find service url, attempting to look up via ingress
+DEBUG: found service url https://vault-**.cb-aps-poc-consumer-plm4.**aas.io
+DEBUG: Connecting to vault on https://vault-**.cb-aps-poc-consumer-plm4.**aas.io
+ensure we have the helm repository https://storage.googleapis.com/chartmuseum.jenkins-x.io
+validating the kaniko secret in namespace **
+
+valid: there is a Secret: kaniko-secret in namespace: **
+the cluster looks good, you are ready to '** boot' now!
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-hwp9h-6[0m stage [32mrelease[0m and container [32mstep-get-subdomain[0m
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-hwp9h-6[0m stage [32mrelease[0m and container [32mstep-install-jx-crds[0m
+Jenkins X CRDs upgraded with success
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-hwp9h-6[0m stage [32mrelease[0m and container [32mstep-install-nginx[0m
+Modified file /workspace/source/systems/**ing/Chart.yaml to set the chart to version 6
+Copying the helm source directory /workspace/source/systems/**ing to a temporary location for building and applying /tmp/**-helm-apply-082756985/**ing
+Applying helm chart at /tmp/**-helm-apply-082756985/**ing as release name **ing to namespace kube-system
+verifying the helm requirements versions in dir: . using version stream URL:  and git ref: 
+Wrote chart values.yaml /tmp/**-helm-apply-082756985/**ing/values.yaml generated from directory tree
+generated helm /tmp/**-helm-apply-082756985/**ing/values.yaml
+
+nginx-ingress:
+  controller:
+    extraArgs:
+      publish-service: kube-system/**ing-nginx-ingress-controller
+    replicaCount: 3
+    service:
+      omitClusterIP: true
+  defaultBackend:
+    service:
+      omitClusterIP: true
+  rbac:
+    create: true
+
+Using values files: /tmp/**-helm-apply-082756985/**ing/values.yaml
+verifying the helm requirements versions in dir: . using version stream URL:  and git ref: 
+adding version 1.21.0 to dependency nginx-ingress in file /tmp/**-helm-apply-082756985/**ing/requirements.yaml
+adding dependency versions to file /tmp/**-helm-apply-082756985/**ing/requirements.yaml
+Applying Apps chart overrides
+Applying chart overrides
+
+
+Showing logs for build [32mmuirp-environment-jx-aps-consum-hwp9h-6[0m stage [32mrelease[0m and container [32mstep-create-install-values[0m
+using a custom domain and GKE so enabling external dns, you can also now enable TLS
+validating the external-dns secret in namespace **
+valid: there is a Secret: external-dns-gcp-sa in namespace: **
+error: unable to enable 'dns' api: failed to run 'gcloud services list --enabled --project cb-aps-poc-consumer-plm4' command in directory '', output: 'ERROR: (gcloud.services.list) UNAUTHENTICATED: Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.'
+[31m
+Pipeline failed on stage 'release' : container 'step-create-install-values'. The execution of the pipeline has stopped.[0m
